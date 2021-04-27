@@ -1,4 +1,4 @@
-<h1 align="center">Animated hamburger menu 🍔</h1>
+<h1 align="center">Slide that can be scroll🎿 </h1>
 <p>
   <a href="https://www.npmjs.com/package/todo" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/todo.svg">
@@ -6,7 +6,7 @@
 </p>
 
 ```
-Animated hamburger menu using checkbox only
+Pure HTML & CSS that can be scrolled in mobile view
 ```
 
 <img src="./preview.gif" style="padding :20px" width="100%">

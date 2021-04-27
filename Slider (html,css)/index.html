@@ -1,65 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure Slider</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <main>                        
-        <div class="container">
-          <a class="icon" onclick="prev()">&#10094;</a>
-          <div class="slide" id="slide">
-            <div
-              class="card"              
-            >
-            <img src="img/img1.jpg" class="card-thumbnail">
-              <div class="card-title">Image 1</div>                                            
-          </div>
-          <div
-              class="card"              
-            >
-            <img src="img/img2.jpg" class="card-thumbnail">
-              <div class="card-title">Image 2</div>                                            
-          </div> 
-          <div
-          class="card"              
-        >
-        <img src="img/img2.jpg" class="card-thumbnail">
-          <div class="card-title">Image 2</div>                                            
-      </div>   
-          <div
-          class="card"              
-        >
-          <img src="img/img3.jpg"           
-          class="card-thumbnail">            
-          <div class="card-title">Image 3</div>                                            
-      </div>   
-      <div
-      class="card"              
-    >
-    <img src="img/img2.jpg" class="card-thumbnail">
-      <div class="card-title">Image 2</div>                                            
-  </div> 
-  <div
-  class="card"              
->
-<img src="img/img2.jpg" class="card-thumbnail">
-  <div class="card-title">Image 2</div>                                            
-</div>     
-        </div>
-        <a class="icon" onclick="next()">&#10095;</a>
-        </div>
-      </main>
-      <script>
-         function next() {           
-             document.getElementById('slide').scrollBy(300,0);
-        }
-
-        function prev() {
-          document.getElementById('slide').scrollBy(-300,0);
-        }
-      </script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pure Slider</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<a class="icon" onclick="prev()">&#10094;</a>
+				<div class="slide" id="slide">
+					<div class="card">
+						<img src="img/img1.jpg" class="card-thumbnail" />
+						<div class="card-title">Image 1</div>
+					</div>
+					<div class="card">
+						<img src="img/img2.jpg" class="card-thumbnail" />
+						<div class="card-title">Image 2</div>
+					</div>
+					<div class="card">
+						<img src="img/img2.jpg" class="card-thumbnail" />
+						<div class="card-title">Image 2</div>
+					</div>
+					<div class="card">
+						<img src="img/img3.jpg" class="card-thumbnail" />
+						<div class="card-title">Image 3</div>
+					</div>
+					<div class="card">
+						<img src="img/img2.jpg" class="card-thumbnail" />
+						<div class="card-title">Image 2</div>
+					</div>
+					<div class="card">
+						<img src="img/img2.jpg" class="card-thumbnail" />
+						<div class="card-title">Image 2</div>
+					</div>
+				</div>
+				<a class="icon" onclick="next()">&#10095;</a>
+			</div>
+		</main>
+		<script>
+			function next() {
+				document.getElementById("slide").scrollBy(300, 0);
+			}
+			function prev() {
+				document.getElementById("slide").scrollBy(-300, 0);
+			}
+		</script>
+	</body>
 </html>
