@@ -23,20 +23,5 @@
         </nav>    
     </header>                       
 </div> 
-<script>
-     const hamburger = document.querySelector('.toggler');     
-     const menu_li = document.querySelectorAll('.menu-li'); 
-
-     num = 0;
-
-     hamburger.addEventListener('change', () =>{    
-         
-            menu_li.forEach((e)=>{                
-                setTimeout(function() {
-                    e.classList.toggle('fade');
-                }, num += 500);                
-            });                                  
-     });
-</script>  
 </body>
 </html>
