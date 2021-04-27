@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  position: relative;
+}
+
+header {
+  padding: 40px;
+  z-index: 2;
+  position: relative;
+}
+
+nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: darkblue;
+  transform: translateY(-100vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  z-index: 1;
+}
+
+li {
+  list-style: none;
+  font-size: 2rem;
+  color: black;
+  font-weight: bold;
+  line-height: 150%;
+  opacity: 0;
+}
+
+.hamburger {
+  width: 50px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all 400ms ease-in;
+}
+
+.hamburger div {
+  height: 5px;
+  width: 100%;
+  background-color: dimgray;
+  transition: all 0.3s ease-in-out;
+  z-index: 3;
+  position: relative;
+}
+
+.hamburger div:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background-color: dimgray;
+  transition: all 0.15s ease-in-out;
+}
+
+.hamburger div:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background-color: dimgray;
+  transition: all 0.15s ease-in-out;
+}
+
+.hamburger div:before {
+  transform: translateY(-16px);
+}
+
+.hamburger div:after {
+  transform: translateY(16px);
+}
+
+.toggler {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  transform: translate(20px, -20px);
+  width: 50px;
+  height: 50px;
+  z-index: 4;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.toggler:checked + .hamburger div {
+  background: transparent;
+  box-shadow: none;
+}
+
+.toggler:checked + .hamburger div:before {
+  transform: rotate(45deg);
+}
+
+.toggler:checked + .hamburger div:after {
+  transform: rotate(-45deg);
+}
+
+.toggler:checked ~ nav {
+  transform: translate(0);
+}
+
+.toggler ~ nav {
+  transition: all 600ms ease-in-out;
+}
+
+/* Hover */
+.toggler:checked:hover + .hamburger div {
+  transform: rotate(90deg);
+}
+
+.toggler:checked:hover + .hamburger div:before {
+  transform: rotate(45deg);
+}
+
+.toggler:checked:hover + .hamburger div:after {
+  transform: rotate(-45deg);
+}
+
+.toggler:hover .hamburger {
+  opacity: 70%;
+}
+
+.toggler:hover + .hamburger div:before {
+  transform: translateY(-22px);
+}
+
+.toggler:hover + .hamburger div:after {
+  transform: translateY(22px);
+}
+
+.fade {
+  opacity: 1;
+}
