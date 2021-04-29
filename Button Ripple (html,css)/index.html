@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Button Ripple</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				height: 100vh;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.btn {
+				font-size: 4rem;
+				padding: 22px 45px;
+				border-radius: 4px;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				overflow: hidden;
+				position: relative;
+			}
+
+			.btn-primary {
+				color: white;
+				background-color: #0074d9;
+			}
+
+			/* Ripple Animation Start Here */
+			/* create circle  */
+			.anim-ripple::after {
+				content: "";
+				position: absolute;
+				background: white;
+				left: 30%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				pointer-events: none;
+				border-radius: 50%;
+				opacity: 0;
+				width: 500px;
+				height: 500px;
+			}
+
+			/* when button click animate */
+			.anim-ripple:active:after {
+				width: 0px;
+				height: 0px;
+				opacity: 0.75;
+			}
+
+			/* now keep animation for 0.45s */
+			.anim-ripple:not(:active)::after {
+				transition: all 450ms ease-in;
+			}
+		</style>
+	</head>
+	<body>
+		<a class="btn btn-primary anim-ripple">Button</a>
+	</body>
+</html>
