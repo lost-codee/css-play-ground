@@ -1,0 +1,49 @@
+<head>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			width: 100vw;
+			height: 100vh;
+			background-image: url("bg.jpg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.box {
+			height: 480px;
+			width: 720px;
+			border-width: 2.5px;
+			border-style: solid;
+			border-image: linear-gradient(330deg, #234139, rgb(133, 164, 173));
+			background: linear-gradient(330deg, #2a494159, #2a49410c);
+			backdrop-filter: blur(5px);
+			position: relative;
+		}
+
+		.box h1 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			font-size: 3rem;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 500;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<h1>Glass Challenge</h1>
+	</div>
+</body>
