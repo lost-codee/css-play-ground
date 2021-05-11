@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Credit card galssmorphism</title>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500&display=swap");
+
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			body {
+				height: 100vh;
+				width: 100vw;
+				font-family: "Sora", sans-serif;
+				background: #1e203a;
+				position: relative;
+			}
+
+			p {
+				font-family: Sora;
+				font-style: normal;
+				font-weight: normal;
+				color: #ffffff;
+				opacity: 0.7;
+			}
+
+			.circle {
+				position: absolute;
+				height: 300px;
+				width: 300px;
+				border-radius: 50%;
+			}
+
+			.circle:nth-child(1) {
+				top: 40%;
+				left: -100px;
+				background: linear-gradient(
+					180deg,
+					#6b15d9 -14.71%,
+					rgba(229, 41, 120, 0.51) 170.59%
+				);
+			}
+
+			.circle:nth-child(2) {
+				top: 10%;
+				right: 100px;
+				width: 248px;
+				height: 248px;
+				background: linear-gradient(
+					180deg,
+					#6b15d9 -14.71%,
+					rgba(229, 41, 120, 0.51) 170.59%
+				);
+			}
+
+			.circle:nth-child(3) {
+				top: 34%;
+				right: 50%;
+				transform: translate(-50%, -30%);
+				width: 128px;
+				height: 128px;
+				background: linear-gradient(
+					180deg,
+					#d98b15 -14.71%,
+					rgba(229, 41, 120, 0.51) 156.45%
+				);
+			}
+
+			/* ========== Credit Card Section ========== */
+			.credit-card {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: space-between;
+				padding: 50px 64px;
+				aspect-ratio: 1.58;
+				width: 50%;
+				max-width: 866px;
+				left: 50%;
+				top: 50%;
+				overflow: hidden;
+				border-radius: 30px;
+				position: absolute;
+				transform: translate(-50%, -50%);
+				z-index: 5;
+			}
+
+			.glassmorphism {
+				background: linear-gradient(
+					111.68deg,
+					rgba(255, 255, 255, 0.41) 0%,
+					rgba(255, 255, 255, 0.1) 100%
+				);
+				box-shadow: 0px 4px 30px -1px rgba(0, 0, 0, 0.2);
+				backdrop-filter: blur(20px);
+			}
+
+			.glassmorphism::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: 30px;
+				padding: 4px;
+				background: linear-gradient(
+					132.4deg,
+					rgba(255, 255, 255, 0.58) 20.32%,
+					rgba(142, 143, 156, 0.62) 32.36%,
+					rgba(98, 101, 147, 0.66) 45.64%,
+					rgba(30, 32, 58, 0.68) 89.92%
+				);
+				-webkit-mask: linear-gradient(#fff 0 0) content-box,
+					linear-gradient(#fff 0 0);
+				-webkit-mask-composite: destination-out;
+				mask-composite: exclude;
+			}
+
+			.glassmorphism:after {
+				content: "";
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				left: 0;
+				top: 0;
+				mix-blend-mode: overlay;
+				background-image: url("./noise.png");
+				opacity: 0.55;
+				z-index: -1;
+			}
+
+			.credit-card .header p {
+				line-height: 50px;
+				font-size: 36px;
+			}
+
+			.credit-card .body p {
+				margin-right: 48px;
+				line-height: 50px;
+				font-size: 48px;
+			}
+
+			.credit-card .footer p {
+				line-height: 50px;
+				font-size: 48px;
+			}
+
+			.credit-card .body {
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				align-self: flex-start;
+			}
+
+			.credit-card .footer {
+				mix-blend-mode: overlay;
+				text-transform: uppercase;
+				width: 100%;
+				display: flex;
+				align-self: center;
+				align-items: center;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			.master-card-logo {
+				height: 70px;
+				width: 70px;
+				background-color: #f79f1b;
+				opacity: 0.8;
+				border-radius: 50%;
+				position: relative;
+				z-index: 1;
+			}
+
+			.master-card-logo:after {
+				z-index: 1;
+				content: "";
+				left: -50%;
+				position: absolute;
+				height: 70px;
+				width: 70px;
+				background-color: #eb001b;
+				opacity: 0.7;
+				border-radius: 50%;
+			}
+
+			.master-card-logo:before {
+				z-index: 5;
+				content: "";
+				left: 0;
+				top: 0;
+				position: absolute;
+				height: 70px;
+				width: 70px;
+				background-color: #f79f1b;
+				opacity: 0.8;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="credit-card glassmorphism">
+			<div class="header">
+				<p>Diners</p>
+				<p>ClubMiles</p>
+			</div>
+			<div class="body">
+				<p>5535</p>
+				<p>5535</p>
+				<p>5535</p>
+				<p>5535</p>
+			</div>
+			<div class="footer">
+				<p>Joe Doe</p>
+				<div class="master-card-logo"></div>
+			</div>
+		</div>
+	</body>
+</html>
