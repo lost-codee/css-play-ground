@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bubble</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				height: 100vh;
+				width: 100vw;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				filter: blur(5px) contrast(50%);
+				animation: rotate 20s linear infinite;
+			}
+
+			@keyframes rotate {
+				from {
+					transform: rotate(0);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+
+			.circle {
+				height: 150px;
+				width: 150px;
+				border-radius: 50%;
+				background-color: blue;
+				animation: spin 2.5s linear infinite;
+			}
+
+			@keyframes spin {
+				from {
+					transform: rotate(0) translateX(50px) scale(1);
+				}
+				to {
+					transform: rotate(360deg) translateX(50px) scale(0.8);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="circle"></div>
+	</body>
+</html>

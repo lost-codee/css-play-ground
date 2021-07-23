@@ -1,0 +1,71 @@
+<head>
+	<style>
+		:root {
+			--rotate-speed: 30s;
+		}
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			font-size: 75px;
+			height: 100vh;
+			width: 100vw;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			perspective: 10em;
+			perspective-origin: 50% calc(50% - 2em);
+		}
+		.scene {
+			transform-style: preserve-3d;
+			position: relative;
+			animation: rotate var(--rotate-speed) infinite linear;
+		}
+
+		@keyframes rotate {
+			to {
+				transform: rotateY(360deg);
+			}
+		}
+
+		.ball {
+			position: absolute;
+			bottom: -1em;
+			left: -0.5em;
+			width: 1em;
+			height: 1em;
+			border-radius: 50%;
+			background-image: radial-gradient(circle at top, white, rgb(78, 78, 78));
+			animation: rotate var(--rotate-speed) infinite linear reverse;
+		}
+
+		.floor {
+			top: 1em;
+			position: absolute;
+			width: 5em;
+			height: 5em;
+			transform: translate(-50%, -50%) rotateX(90deg);
+			background-image: radial-gradient(#0000, rgb(177, 177, 177) 75%);
+		}
+
+		.ball-shadow {
+			position: absolute;
+			top: 1em;
+			width: 1em;
+			height: 1em;
+			background-image: radial-gradient(#0007, #0000 50%);
+			transform: translate(-50%, -50%) rotateX(90deg);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="scene">
+		<div class="floor"></div>
+		<div class="ball"></div>
+		<div class="ball-shadow"></div>
+	</div>
+</body>

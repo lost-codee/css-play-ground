@@ -1,0 +1,30 @@
+* {
+	scroll-behavior: smooth;
+}
+
+body {
+	padding: 40px;
+	width: 100vw;
+	height: 100vh;
+	gap: 10vmin;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#scroller {
+	width: 80%;
+	grid-auto-flow: column;
+	display: grid;
+	gap: 1vmin;
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch;
+	overscroll-behavior-inline: contain;
+}
+
+#scroller div {
+	height: 300px;
+	width: 300px;
+	background-color: #f00;
+}
